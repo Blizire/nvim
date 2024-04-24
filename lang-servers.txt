@@ -1,0 +1,16 @@
+# cmake - cmake
+pip install cmake-language-server
+
+# lua-language-server - lua
+scoop install lua-language-server
+
+# rust-analyzer - rust
+scoop install rust
+scoop install rust-analyzer
+
+# clangd - c/c++
+scoop install gcc
+scoop install clangd
+
+# pyright - Python
+pip install pyright
