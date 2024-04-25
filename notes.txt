@@ -3,3 +3,4 @@ issue using telescope-file-browser ( idk how to work it )
 
 string substitution :%s/SRC/REPLACE/gc  (g global, c check)
 
+http://./\<#0>:  ://./<#0>
