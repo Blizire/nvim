@@ -23,7 +23,7 @@ vim.opt.shiftwidth=2
 vim.opt.softtabstop=2
 vim.opt.expandtab = true
 vim.opt.wrap = false
-vim.opt.clipboard=unnamedplus -- does not work unless mouse=v
+vim.opt.clipboard="unnamedplus" -- does not work unless mouse=v
 vim.opt.mouse = 'v'
 -- custom keymap bindings for default controls
 vim.keymap.set('n', '<leader>w', ':write<CR>')

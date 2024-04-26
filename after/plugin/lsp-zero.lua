@@ -52,11 +52,16 @@ lspconfig.lua_ls.setup({
 require("mason").setup()
 require("mason-lspconfig").setup(
   {
-    ensure_installed = {"lua_ls", "rust_analyzer", "cmake", "pyright"},
+    -- No clangd since it has to manually be installed on arm archs
+    ensure_installed = {"lua_ls", "rust_analyzer", "cmake", "pyright", "bashls", "powershell_es"},
   }
 )
 
---require('lspconfig').lua_ls.setup(generic_setup)
+require('lspconfig').powershell_es.setup({
+  shell="powershell.exe"
+})
+require('lspconfig').lua_ls.setup(generic_setup)
+require('lspconfig').bashls.setup(generic_setup)
 require('lspconfig').clangd.setup(generic_setup)
 require('lspconfig').pyright.setup(generic_setup)
 require('lspconfig').cmake.setup(generic_setup)
