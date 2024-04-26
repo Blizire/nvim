@@ -48,6 +48,14 @@ lspconfig.lua_ls.setup({
   }
 })
 
+-- mason needs to be before language server setups
+require("mason").setup()
+require("mason-lspconfig").setup(
+  {
+    ensure_installed = {"lua_ls", "rust_analyzer", "cmake", "pyright"},
+  }
+)
+
 --require('lspconfig').lua_ls.setup(generic_setup)
 require('lspconfig').clangd.setup(generic_setup)
 require('lspconfig').pyright.setup(generic_setup)
