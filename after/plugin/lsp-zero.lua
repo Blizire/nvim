@@ -62,6 +62,9 @@ require('lspconfig').pyright.setup(generic_setup)
 require('lspconfig').cmake.setup(generic_setup)
 require('lspconfig').rust_analyzer.setup(generic_setup)
 
+
+-- cmp configuration is also here since its tied into the LSP
+-- probably shouldn't be though... :)
 local cmp = require('cmp')
 
 cmp.setup({
