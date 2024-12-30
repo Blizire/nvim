@@ -12,13 +12,28 @@ I do not recommend using this. Tailored specifically for me.
 
   \<leader\> vv (custom) OR ctrl Q (default) (visual block select)
 
-  \<leader\> ff (telescope file search) (plugin custom)
-
-  \<leader\> fg (telescope regex search in files) (plugin custom)
-
 # favorite commands
 
   :%s/text/newtext (replaces all occurences of text with new text)
+
+# telescope (fuzzy search file finder)
+
+https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#usage
+
+Trigger Search Menu
+
+  \<leader\> ff search for files/directories
+
+  \<leader\> fg search text in files with regex
+
+  \<leader\> fb search for open buffers
+
+  \<leader\> fh search files with help tags
+
+Menu Shortcuts
+
+\<C-x\>, \<C-v\> : split horizontal/vertical
+\<C-t\> : goto file in newtab
 
 # macro guide
 
