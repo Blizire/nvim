@@ -30,6 +30,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
 
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition,
+      { buffer = args.buf, desc = "LSP go to definition" })
+    vim.keymap.set("n", "gD", vim.lsp.buf.declaration,
+      { buffer = args.buf, desc = "LSP go to declaration" })
+
     vim.keymap.set("n", "<leader>lf", function()
       vim.lsp.buf.format({ bufnr = args.buf })
     end, { buffer = args.buf, desc = "LSP format buffer" })
